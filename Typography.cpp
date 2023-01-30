@@ -6,19 +6,19 @@ ostream& operator<<(ostream& os, const Typography& typography)
 {
 	for (int i = 0; i < typography.m_books.size(); i++)
 	{
-		os << "Êíèãà" << endl;
+		os << "ÐšÐ½Ð¸Ð³Ð°" << endl;
 		os << typography.m_books[i] << endl;
 	}
 				
 	for (int i = 0; i < typography.m_posters.size(); i++)
 	{
-		os << "Ïîñòåð" << endl;
+		os << "ÐŸÐ¾ÑÑ‚ÐµÑ€" << endl;
 		os << typography.m_posters[i] << endl;
 	}
 		
 	for (int i = 0; i < typography.m_businessCards.size(); i++)
 	{
-		os << "Âèçèòêà" << endl;
+		os << "Ð’Ð¸Ð·Ð¸Ñ‚ÐºÐ°" << endl;
 		os << typography.m_businessCards[i] << endl;
 	}
 		
@@ -39,20 +39,20 @@ istream& operator>>(istream& is, Typography& typography)
 			else		
 				is >> string;
 			
-		if (string == "Êíèãà")
+		if (string == "ÐšÐ½Ð¸Ð³Ð°")
 		{
 			Book book;
 			is >> book;
 			typography.AddBook(book);
 		}
-		else if (string == "Ïîñòåð")
+		else if (string == "ÐŸÐ¾ÑÑ‚ÐµÑ€")
 		{
 			Poster poster;
 			is >> poster;
 			typography.AddPoster(poster);
 
 		}
-		else if (string == "Âèçèòêà")
+		else if (string == "Ð’Ð¸Ð·Ð¸Ñ‚ÐºÐ°")
 		{
 			BusinessCard businessCard;
 			is >> businessCard;
